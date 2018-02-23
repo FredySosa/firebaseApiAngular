@@ -9,18 +9,22 @@ import { RoutesModule } from './routes.module';
 import {HeroeService} from './services/heroe.service';
 
 import {FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {KeysPipe} from './pipes/keys.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroeComponent
+    HeroeComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
     RoutesModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [HeroeService],
   bootstrap: [AppComponent]
